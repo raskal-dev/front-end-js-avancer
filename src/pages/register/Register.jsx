@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 const Register = () => {
     const [nom_user, setNom_user] = useState("");
@@ -9,7 +10,7 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [registerStatus, setRegisterStatus] = useState("");
 
-    const register = (e) => {
+    const registerSubmit = (e) => {
         e.preventDefault();
         Axios.post("http://localhost:3001/register", {
             nom_user: nom_user,
@@ -30,6 +31,7 @@ const Register = () => {
         <div className="container">
             <div className="loginForm">
                 <form>
+                    <h3>{registerStatus}</h3>
                 <label htmlFor="nom_user">Nom</label>
                 <input type="text" name="nom_user" id="nom_user" className="textInput" placeholder='Nom ...' onChange={(e) => {setNom_user(e.target.value)}} required />
 
@@ -45,7 +47,9 @@ const Register = () => {
                 <label htmlFor="password">Mot de pass</label>
                 <input type="password" name="password" id="password" className="textInput" placeholder='Password ...' onChange={(e) => {setPassword(e.target.value)}} required />
 
-                <input type="submit" value="Register" onClick={register} className='button' />
+                <input type="submit" value="Register" onClick={registerSubmit} className='button' />
+                <br />
+                <NavLink to="/login">login</NavLink>
                 </form>
             </div>
         </div>
