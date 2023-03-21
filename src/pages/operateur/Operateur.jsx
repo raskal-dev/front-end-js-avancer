@@ -44,9 +44,9 @@ const Operateur = () => {
 
   return (
     <>
-      <Container>
         <Menu />
         <Title>Operatuer</Title>
+      <Container>
         <Form onEdit={onEdit} setOnEdit={setOnEdit} getOperateurs={getOperateurs} />
         <Grid operateurs={operateurs} setOperateurs={setOperateurs} setOnEdit={setOnEdit} />
 
