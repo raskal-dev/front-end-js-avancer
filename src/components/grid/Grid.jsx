@@ -45,7 +45,7 @@ const Grid = ({ operateurs, setOperateurs, setOnEdit }) => {
     };
 
     const handleDelete = async (id_op) => {
-        await axios.delete("http://localhost:3001/operateurs/delete/" + id_op).then(({ data }) => {
+        await axios.delete("http://localhost:3001/operateurs/delete/" + id_op).then((data) => {
             const newArray = operateurs.filter((operateurs) => operateurs.id_op !== id_op);
 
             setOperateurs(newArray);

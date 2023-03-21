@@ -40,8 +40,8 @@ const GridAut = ({ autorisation, setAutorisation, setOnEdit }) => {
                 <Tr key={i}>
                     <Td>{item.id_aut}</Td>
                     <Td>{item.ref_autorisation}</Td>
-                    <Td>{item.date_du}</Td>
-                    <Td>{item.date_au}</Td>
+                    <Td>{new Date(item.date_du).toLocaleDateString('fr-FR')}</Td>
+                    <Td>{new Date(item.date_au).toLocaleDateString('fr-FR')}</Td>
                     <Td>{item.lieu_depart}</Td>
                     <Td>{item.lieu_arrive}</Td>
                     <Td>{item.nom}</Td>
