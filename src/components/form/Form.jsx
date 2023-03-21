@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 
-const FormContainer = styled.form`
+export const FormContainer = styled.form`
     display: flex;
     align-items: flex-end;
     gap: 10px;
@@ -14,12 +14,12 @@ const FormContainer = styled.form`
     border-radius: 5px;
 `;
 
-const InputArea = styled.div`
+export const InputArea = styled.div`
     display: flex;
     flex-direction: column;
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
     width: 120px;
     padding: 0 10px;
     border: 1px solid #bbb;
@@ -27,9 +27,9 @@ const Input = styled.input`
     height: 40px;
 `;
 
-const Label = styled.label``;
+export const Label = styled.label``;
 
-const Button = styled.button`
+export const Button = styled.button`
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;

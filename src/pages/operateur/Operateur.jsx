@@ -19,7 +19,10 @@ const Container = styled.div`
   gap: 10px;
 `;
 
-const Title = styled.h2``;
+const Title = styled.h1`
+    color: white;
+    margin: 15px;
+`;
 
 const Operateur = () => {
 

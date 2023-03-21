@@ -6,6 +6,7 @@ import Home from './pages/home/Home.jsx';
 import Operateur from './pages/operateur/Operateur';
 import Plus from './pages/plus/Plus';
 import Autorisation from './pages/autorisation/Autorisation.jsx';
+import './App.css';
 
 
 
